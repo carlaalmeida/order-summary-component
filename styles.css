@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+:root {
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+  --border-radius: 2rem;
+}
+* {
+  /* margin: 0;
+  padding: 0;
+  box-sizing: border-box; */
+}
+body {
+  font-family: "Red Hat Display", sans-serif;
+
+  font-size: 16px;
+  background: var(--pale-blue) url("images/pattern-background-desktop.svg")
+    no-repeat;
+  background-size: contain;
+  background-position: top;
+}
+
+p {
+  line-height: 1.5;
+  color: var(--desaturated-blue);
+}
+
+.container {
+  padding: 2.5rem 0;
+  width: 100%;
+}
+
+.card {
+  background-color: white;
+  border-radius: var(--border-radius);
+  margin: 2rem auto;
+  width: 95%;
+  text-align: center;
+}
+
+img.banner {
+  width: 100%;
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+}
+
+.content {
+  width: 75%;
+  margin: 0 auto;
+}
+
+.plan {
+  text-align: left;
+  background-color: var(--very-pale-blue);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.plan .icon {
+  border-radius: 50%;
+}
+
+.plan .plan-name {
+  font-weight: 700;
+}
+
+.plan .plan-price {
+  color: var(--desaturated-blue);
+}
+
+.plan .plan-name,
+.plan .plan-price {
+  display: block;
+  margin: 0.25rem auto 0.25rem 1rem;
+}
+
+.plan .plan-action {
+  margin-left: auto;
+  margin-right: 0;
+  color: var(--bright-blue);
+}
+
+.plan .plan-action:hover {
+  text-decoration: none;
+  color: var(--desaturated-blue);
+}
+
+.button-group {
+  padding: 2rem 0;
+}
+
+button {
+  width: 100%;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  font-weight: 700;
+  margin: 0.5rem 0;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+button.primary {
+  color: white;
+  background-color: var(--bright-blue);
+  box-shadow: 0px 5px 10px 5px var(--very-pale-blue);
+}
+
+button.primary:hover {
+  background-color: var(--desaturated-blue);
+}
+
+button.secondary {
+  color: var(--desaturated-blue);
+  background-color: white;
+}
+
+button.secondary:hover {
+  color: black;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: var(--desaturated-blue);
+  text-decoration: none;
+}
+
+.attribution a:hover {
+  color: var(--bright-blue);
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-image: url("images/pattern-background-mobile.svg");
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .card {
+    width: 45%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .card {
+    width: 25%;
+  }
+}
